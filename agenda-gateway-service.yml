@@ -19,3 +19,11 @@ zuul:
       serviceId: agenda-cadastro-dashboard-service
   host:
     socket-timeout-millis: 30000
+   
+security:
+  basic:
+    enable: false   
+
+management:
+  security:
+    enabled: false 
