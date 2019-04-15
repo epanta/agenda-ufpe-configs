@@ -15,6 +15,7 @@ eureka:
     
 zuul:
   routes:
-    agendaUI.serviceId: agenda-cadastro-dashboard-service
+    agendaUI:
+      serviceId: agenda-cadastro-dashboard-service
   host:
     socket-timeout-millis: 30000
