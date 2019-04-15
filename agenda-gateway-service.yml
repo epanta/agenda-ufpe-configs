@@ -19,7 +19,10 @@ zuul:
       path: /agendaUI/**
       serviceId: agenda-cadastro-dashboard-service
   host:
-    socket-timeout-millis: 30000
+    connect-timeout-millis: 5000
+    max-per-route-connections: 10000
+    max-total-connections: 5000
+    socket-timeout-millis: 60000
    
 security:
   basic:
