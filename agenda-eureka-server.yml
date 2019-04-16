@@ -4,11 +4,6 @@ server:
 eureka:
   instance:
     hostname: localhost
-	leaseRenewalIntervalInSeconds: 10
   client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 3000
+    registerWithEureka: false
+    fetchRegistry: false
