@@ -2,8 +2,6 @@ server:
   port: 9094
 
 eureka:
-  instance:
-    prefer-ip-address: false
   client:
     registerWithEureka: true
     fetchRegistry: true
