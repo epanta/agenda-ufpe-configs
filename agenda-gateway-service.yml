@@ -32,9 +32,6 @@ ribbon:
   connection-timeout: 60000
   eureka: 
     enabled: true
-zuulserver:
-  ribbon:
-    listOfServers: localhost:8080
 zuul:
   ribbon:
      eager-load:
