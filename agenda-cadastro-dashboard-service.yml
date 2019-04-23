@@ -13,6 +13,40 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
     
+hystrix:
+  threadpool:
+    default:
+      coreSize: 1000
+      maximumSize: 10000
+      queueSizeRejectionThreshold: -1
+      maxQueueSize: -1
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+              timeoutInMilliseconds: 41000
+ribbon: 
+  ReadTimeout: 60000
+  connection-timeout: 60000
+  eureka: 
+    enabled: true
+zuul:
+  ignoredServices: '*'
+  ribbon:
+     eager-load:
+       enabled: true 
+  routes:
+    agendaUI:
+      path: /agendaUI/**
+      serviceId: agenda-cadastro-dashboard-service 
+  host:
+    connect-timeout-millis: 5000
+    max-per-route-connections: 10000
+    max-total-connections: 5000
+    socket-timeout-millis: 60000
+    
 security:
   basic:
     enable: false   
