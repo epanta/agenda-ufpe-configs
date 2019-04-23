@@ -26,6 +26,9 @@ ribbon:
   eureka: 
     enabled: true
 zuul:
+  ribbon:
+     eager-load:
+       enabled: true 
   routes:
     agendaUI:
       path: /agendaUI/**
