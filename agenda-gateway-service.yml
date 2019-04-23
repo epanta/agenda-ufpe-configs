@@ -1,6 +1,11 @@
 server:
   port: 9094
 
+endpoints:
+  default:
+    web:
+      enabled:true
+
 eureka:
   instance:
     hostname: eureka-server
