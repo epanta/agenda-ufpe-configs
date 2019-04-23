@@ -22,7 +22,7 @@ hystrix:
             timeoutInMilliseconds: 60000
 ribbon: 
   ReadTimeout: 60000
-  connection-timeout: 3000
+  connection-timeout: 60000
   eureka: 
     enabled: true
 zuul:
@@ -32,7 +32,7 @@ zuul:
   routes:
     agendaUI:
       path: /agendaUI/**
-      serviceId: dashboard-server
+      serviceId: agenda-cadastro-dashboard-service
   host:
     connect-timeout-millis: 5000
     max-per-route-connections: 10000
