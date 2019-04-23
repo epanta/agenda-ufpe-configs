@@ -33,13 +33,12 @@ ribbon:
   eureka: 
     enabled: true
 zuul:
+  ignoredServices: '*'
   ribbon:
      eager-load:
        enabled: true 
   routes:
-    agendaUI:
-      path: /agendaUI/**
-      serviceId: agenda-cadastro-dashboard-service
+    dashboard: /dashboard/** 
   host:
     connect-timeout-millis: 5000
     max-per-route-connections: 10000
