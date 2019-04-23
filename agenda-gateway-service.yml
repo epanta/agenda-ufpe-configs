@@ -19,12 +19,12 @@ hystrix:
       execution: 
         isolation: 
           thread: 
-            timeoutInMilliseconds: 30000
+            timeoutInMilliseconds: 60000
 ribbon: 
   ReadTimeout: 60000
   connection-timeout: 3000
   eureka: 
-    enabled: true
+    enabled: false
 zuul:
   routes:
     agendaUI:
