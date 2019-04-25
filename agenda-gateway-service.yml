@@ -21,6 +21,8 @@ hystrix:
 ribbon: 
   eureka: 
     enabled: true
+  ReadTimeout: 60000000
+  connection-timeout: 60000000
 zuul:
   ignoredServices: '*'
   ribbon:
