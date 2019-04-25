@@ -34,8 +34,8 @@ ribbon:
 zuul:
   ignoredServices: '*'
   ribbon:
-     eager-load:
-       enabled: true 
+    eager-load:
+      enabled: true 
   routes:
     agendaUI:
       path: /agendaUI/**
