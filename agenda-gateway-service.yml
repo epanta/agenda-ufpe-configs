@@ -19,8 +19,6 @@ hystrix:
                 timeout:
                     enabled: false
 ribbon: 
-  ReadTimeout: 600000
-  connection-timeout: 600000
   eureka: 
     enabled: true
 zuul:
