@@ -13,17 +13,10 @@ eureka:
     wait-time-in-ms-when-sync-empty: 3000
 
 hystrix:
-  threadpool:
-    default:
-      coreSize: 1000
-      maximumSize: 10000
-      queueSizeRejectionThreshold: -1
-      maxQueueSize: -1
   command:
     default:
       execution:
         isolation:
-          strategy: THREAD
           thread:
               timeoutInMilliseconds: 60000
 ribbon: 
