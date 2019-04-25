@@ -23,7 +23,7 @@ ribbon:
   ReadTimeout: 60000
   connection-timeout: 60000
   eureka: 
-    enabled: true
+    enabled: false
 zuul:
   ignoredServices: '*'
   ribbon:
