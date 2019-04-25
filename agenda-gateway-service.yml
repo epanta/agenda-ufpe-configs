@@ -13,12 +13,11 @@ eureka:
     wait-time-in-ms-when-sync-empty: 3000
 
 hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-              timeoutInMilliseconds: 600000
+    command:
+        default:
+            execution:
+                timeout:
+                    enabled: false
 ribbon: 
   ReadTimeout: 600000
   connection-timeout: 600000
