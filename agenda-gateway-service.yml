@@ -19,7 +19,9 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
-ribbon: 
+ribbon:
+  eager-load:
+    enabled: true
   eureka: 
     enabled: true
   ReadTimeout: 60000
