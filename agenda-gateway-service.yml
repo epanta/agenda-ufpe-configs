@@ -22,7 +22,7 @@ hystrix:
 ribbon:
   eager-load:
     enabled: true
-    clients: agendaApi
+    clients: agenda-cadastro-dashboard-service
   eureka: 
     enabled: false
   ReadTimeout: 60000
@@ -34,7 +34,7 @@ zuul:
   ribbon:
     eager-load:
       enabled: true
-      clients: agendaApi
+      clients: agenda-cadastro-dashboard-service
   routes:
     agendaUI:
       path: /agendaUI/**
