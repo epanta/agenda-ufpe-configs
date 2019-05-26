@@ -22,7 +22,7 @@ hystrix:
 ribbon:
   eager-load:
     enabled: true
-    clients: AgendaApi
+    clients: agendaApi
   eureka: 
     enabled: true
   ReadTimeout: 60000
