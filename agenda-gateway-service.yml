@@ -22,6 +22,7 @@ hystrix:
 ribbon:
   eager-load:
     enabled: true
+    clients: AgendaApi
   eureka: 
     enabled: true
   ReadTimeout: 60000
@@ -32,7 +33,8 @@ zuul:
   ignoredServices: '*'
   ribbon:
     eager-load:
-      enabled: true 
+      enabled: true
+      clients: AgendaApi
   routes:
     agendaUI:
       path: /agendaUI/**
