@@ -34,7 +34,6 @@ zuul:
   ribbon:
     eager-load:
       enabled: true
-      clients: AgendaApi
   routes:
     agendaUI:
       path: /agendaUI/**
