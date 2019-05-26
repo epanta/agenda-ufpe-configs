@@ -24,7 +24,7 @@ ribbon:
     enabled: true
     clients: agenda-cadastro-dashboard-service
   eureka: 
-    enabled: false
+    enabled: true
   ReadTimeout: 60000
   ConnectTimeout: 60000
 zuul:
