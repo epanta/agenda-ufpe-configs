@@ -24,7 +24,7 @@ ribbon:
     enabled: true
     clients: dashboard-server
   eureka: 
-    enabled: true
+    enabled: false
   ReadTimeout: 60000
   ConnectTimeout: 60000
 zuul:
