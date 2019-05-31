@@ -13,16 +13,11 @@ eureka:
     wait-time-in-ms-when-sync-empty: 3000
 
 feign:
-  compression:
-    request:
-      enabled: true
-    response:
-      enabled: true
   client:
     config:
       default:
-        connectTimeout: 160000000
-        readTimeout: 160000000
+        connectTimeout: 5000
+        readTimeout: 5000
 hystrix:
   command:
     default:
@@ -33,7 +28,7 @@ hystrix:
 ribbon:
   eager-load:
     enabled: true
-    clients: dashboard-server, agenda-cadastro
+    clients: dashboard-server
   eureka: 
     enabled: true
   ReadTimeout: 90000
@@ -45,7 +40,7 @@ zuul:
   ribbon:
     eager-load:
       enabled: true
-      clients: dashboard-server, agenda-cadastro
+      clients: dashboard-server
   routes:
     agendaUI:
       path: /agendaUI/**
