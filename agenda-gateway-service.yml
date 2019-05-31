@@ -13,6 +13,11 @@ eureka:
     wait-time-in-ms-when-sync-empty: 3000
 
 feign:
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
   client:
     config:
       default:
