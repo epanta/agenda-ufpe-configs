@@ -11,12 +11,6 @@ eureka:
       defaultZone: http://eureka-server:9091/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
-    
-spring:
-  cloud:
-    loadbalancer:
-      retry:
-        enabled: true
 
 feign:
   client:
@@ -34,7 +28,7 @@ hystrix:
 ribbon:
   eager-load:
     enabled: true
-    clients: dashboard-server
+    clients: dashboard-server, agenda-cadastro
   eureka: 
     enabled: true
   ReadTimeout: 90000
@@ -46,7 +40,7 @@ zuul:
   ribbon:
     eager-load:
       enabled: true
-      clients: dashboard-server
+      clients: dashboard-server, agenda-cadastro
   routes:
     agendaUI:
       path: /agendaUI/**
