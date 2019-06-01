@@ -12,26 +12,26 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+feign:
+  client:
+    config:
+      feignName:
+        connectTimeout: 5000
+        readTimeout: 5000
+  hystrix:
+    enabled: true
+
 hystrix:
   threadpool:
     default:
-      coreSize: 20
-      maxQueueSize: 500000
-      keepAliveTimeMinutes: 2
-      queueSizeRejectionThreshold: 500000
+      coreSize: 15
   command:
-    fallback:
-      isolation:
-        semaphore:
-          maxConcurrentRequests: 20
     default:
       execution:
-        timeout:
-          enabled: false
         isolation:
-          strategy: "THREAD"
+          strategy: THREAD
           thread:
-            timeoutInMilliseconds: 30000
+            timeoutInMilliseconds: 2000
 ribbon:
   eager-load:
     enabled: true
