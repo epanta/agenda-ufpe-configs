@@ -12,26 +12,18 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-feign:
-  client:
-    config:
-      feignName:
-        connectTimeout: 5000
-        readTimeout: 5000
-  hystrix:
-    enabled: true
-
 hystrix:
-  threadpool:
-    default:
-      coreSize: 15
   command:
     default:
       execution:
         isolation:
-          strategy: THREAD
           thread:
             timeoutInMilliseconds: 2000
+            
+agenda-cadastro-service
+  eager-load:
+    enabled: true
+    
 ribbon:
   eager-load:
     enabled: true
