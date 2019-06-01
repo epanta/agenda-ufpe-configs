@@ -12,17 +12,11 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-feign:
-  hystrix:
-    enabled: true
-  okhttp:
-    enabled: true
-  client:
-    config:
-      default:
-        connectTimeout: 5000
-        readTimeout: 5000
 hystrix:
+  threadpool.default.coreSize: "20"
+  threadpool.default.maxQueueSize: "500000"
+  threadpool.default.keepAliveTimeMinutes: "2"
+  threadpool.default.queueSizeRejectionThreshold: "500000"
   command:
     default:
       execution:
