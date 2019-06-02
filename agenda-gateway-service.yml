@@ -31,16 +31,6 @@ zuul:
       path: /agendaUI/**
       serviceId: agenda-cadastro-dashboard-service
 
-ribbon:
-  eureka:
-    enabled: false
-  ConnectTimeout: 3000
-  ReadTimeout: 60000
-
-agendaUI:
-  ribbon:
-    listOfServers: agenda-cadastro:9092
-
 security:
   basic:
     enable: false   
