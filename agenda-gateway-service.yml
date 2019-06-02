@@ -35,6 +35,8 @@ zuul:
   ribbon:
     eager-load:
       enabled: true
+  server:
+    connection-timeout: 30000
   routes:
     agendaUI:
       path: /agendaUI/**
