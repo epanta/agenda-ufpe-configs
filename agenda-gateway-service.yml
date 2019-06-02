@@ -28,6 +28,9 @@ hystrix:
             timeoutInMilliseconds: 60000
               
 zuul:
+  host:
+    max-total-connections: 10000
+    max-per-route-connections: 50
   ignoredServices: '*'
   ribbon:
     eager-load:
