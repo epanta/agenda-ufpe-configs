@@ -17,8 +17,9 @@ hystrix:
     default:
       execution:
         isolation:
+          strategy: THREAD
           thread:
-            timeoutInMilliseconds: 2000
+            timeoutInMilliseconds: 60000
               
 ribbon:
   eager-load:
@@ -41,7 +42,7 @@ zuul:
   routes:
     agendaUI:
       path: /agendaUI/**
-      serviceId: dashboard-server 
+      serviceId: agenda-cadastro-dashboard-service 
    
 security:
   basic:
