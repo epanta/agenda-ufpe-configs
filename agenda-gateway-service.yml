@@ -12,10 +12,6 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-ribbon: 
-  ConnectTimeout: 3000
-  ReadTimeout: 60000
-
 hystrix:
   command:
     default:
@@ -33,10 +29,18 @@ zuul:
   routes:
     agendaUI:
       path: /agendaUI/**
-      sensitive-headers: null
       serviceId: agenda-cadastro-dashboard-service
-      strip-prefix: false
-   
+
+ribbon:
+  eureka:
+    enabled: false
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+
+agendaUI:
+  ribbon:
+    listOfServers: agenda-cadastro:9092
+
 security:
   basic:
     enable: false   
