@@ -27,7 +27,7 @@ zuul:
     max-total-connections: 1000
     max-per-route-connections: 1000
   routes:
-    agendaUI:
+    agenda-cadastro-dashboard-service:
       path: /agendaUI/**
       sensitive-headers: null
       serviceId: agenda-cadastro-dashboard-service
