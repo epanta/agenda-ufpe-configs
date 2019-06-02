@@ -29,6 +29,7 @@ hystrix:
               
 zuul:
   host:
+    socket-timeout-millis=30000
     max-total-connections: 10000
     max-per-route-connections: 50
   ignoredServices: '*'
