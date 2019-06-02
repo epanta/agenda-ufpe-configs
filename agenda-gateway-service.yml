@@ -29,11 +29,11 @@ zuul:
   routes:
     agendaUI:
       path: /agendaUI/**
-      serviceId: agenda-cadastro-dashboard-service
+      serviceId: agenda-cadastro-service
 
 ribbon:
   eureka:
-    enabled: false
+    enabled: true
   ConnectTimeout: 3000
   ReadTimeout: 60000
 
