@@ -19,15 +19,12 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 2000
-            
-agenda-cadastro-service
-  eager-load:
-    enabled: true
-    
+              
 ribbon:
   eager-load:
     enabled: true
     clients: dashboard-server
+    listOfServers: agenda-cadastro
   eureka: 
     enabled: true
   ReadTimeout: 90000
@@ -40,6 +37,7 @@ zuul:
     eager-load:
       enabled: true
       clients: dashboard-server
+      listOfServers: agenda-cadastro
   routes:
     agendaUI:
       path: /agendaUI/**
