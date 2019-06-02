@@ -30,7 +30,7 @@ zuul:
     agendaUI:
       path: /agendaUI/**
       sensitive-headers: null
-      serviceId: agenda-cadastro-service
+      serviceId: agenda-cadastro-dashboard-service
       strip-prefix: false
    
 security:
