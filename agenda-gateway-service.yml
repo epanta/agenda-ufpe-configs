@@ -12,6 +12,10 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+feign:
+  hystrix:
+    enabled: false
+
 ribbon:
   eureka:
     enabled: true
