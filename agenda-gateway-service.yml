@@ -21,15 +21,6 @@ hystrix:
           thread:
             timeoutInMilliseconds: 60000
               
-ribbon:
-  eager-load:
-    enabled: true
-    clients: dashboard-server
-    listOfServers: agenda-cadastro:9092
-  eureka: 
-    enabled: true
-  ReadTimeout: 90000
-  ConnectTimeout: 90000
 zuul:
   host:
     socket-timeout-millis: 60000
@@ -38,7 +29,7 @@ zuul:
     eager-load:
       enabled: true
       clients: dashboard-server
-      listOfServers: agenda-cadastro:9092
+      listOfServers: dashboard-server
   routes:
     agendaUI:
       path: /agendaUI/**
