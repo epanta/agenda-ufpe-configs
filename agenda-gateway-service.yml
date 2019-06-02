@@ -12,10 +12,6 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-feign:
-  hystrix:
-    enabled: false
-
 ribbon:
   eureka:
     enabled: true
@@ -29,13 +25,9 @@ hystrix:
         isolation:
           strategy: THREAD
           thread:
-            timeoutInMilliseconds: 60000
+            timeoutInMilliseconds: 100000
               
 zuul:
-  host:
-    socket-timeout-millis: 30000
-    max-total-connections: 10000
-    max-per-route-connections: 50
   ignoredServices: '*'
   ribbon:
     eager-load:
