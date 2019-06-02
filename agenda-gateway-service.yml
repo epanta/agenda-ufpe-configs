@@ -24,7 +24,7 @@ ribbon:
   eager-load:
     enabled: true
     clients: dashboard-server
-    listOfServers: agenda-cadastro
+    listOfServers: agenda-cadastro:9092
   eureka: 
     enabled: true
   ReadTimeout: 90000
@@ -37,7 +37,7 @@ zuul:
     eager-load:
       enabled: true
       clients: dashboard-server
-      listOfServers: agenda-cadastro
+      listOfServers: agenda-cadastro:9092
   routes:
     agendaUI:
       path: /agendaUI/**
