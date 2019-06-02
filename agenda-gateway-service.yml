@@ -6,7 +6,7 @@ eureka:
     hostname: gateway-server
   client:
     registerWithEureka: false
-    fetchRegistry: true
+    fetchRegistry: false
     serviceUrl:
       defaultZone: http://eureka-server:9091/eureka/
   server:
@@ -29,7 +29,6 @@ zuul:
     eager-load:
       enabled: true
       clients: dashboard-server
-      listOfServers: dashboard-server
   routes:
     agendaUI:
       path: /agendaUI/**
