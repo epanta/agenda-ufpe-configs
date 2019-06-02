@@ -29,7 +29,7 @@ zuul:
   routes:
     agendaUI:
       path: /agendaUI/**
-      serviceId: agenda-cadastro-service
+      serviceId: agenda-cadastro-dashboard-service
 
 ribbon:
   eureka:
