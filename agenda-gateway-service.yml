@@ -11,15 +11,6 @@ eureka:
       defaultZone: http://eureka-server:9091/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 100000
               
 zuul:
   ignoredServices: '*'
@@ -27,9 +18,9 @@ zuul:
     max-total-connections: 1000
     max-per-route-connections: 1000
   routes:
-    agendaUI:
-      path: /agendaUI/**
-      serviceId: agenda-cadastro-dashboard-service
+    agenda-cadastro-service:
+      path: /api/contatos/**
+      serviceId: agenda-cadastro-service
 
 security:
   basic:
