@@ -12,6 +12,10 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+ribbon:
+ eureka:
+    enabled: false
+
 hystrix:
   command:
     default:
@@ -22,13 +26,10 @@ hystrix:
             timeoutInMilliseconds: 60000
               
 zuul:
-  host:
-    socket-timeout-millis: 60000
   ignoredServices: '*'
   ribbon:
     eager-load:
       enabled: true
-      clients: dashboard-server
   routes:
     agendaUI:
       path: /agendaUI/**
