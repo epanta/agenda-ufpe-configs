@@ -41,7 +41,7 @@ zuul:
   routes:
     agendaUI:
       path: /agendaUI/**
-      serviceId: agenda-cadastro-service 
+      serviceId: dashboard-server 
    
 security:
   basic:
