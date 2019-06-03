@@ -6,15 +6,13 @@ eureka:
     hostname: gateway-server
   client:
     registerWithEureka: false
-    fetchRegistry: true
+    fetchRegistry: false
     serviceUrl:
       defaultZone: http://eureka-server:9091/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
 ribbon:
-  eureka:
-    enabled: true
   ConnectTimeout: 60000
   ReadTimeout: 60000
 
