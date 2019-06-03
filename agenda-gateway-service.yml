@@ -12,18 +12,6 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-ribbon:
-  ConnectTimeout: 60000
-  ReadTimeout: 60000
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 20000
-
 zuul:
   ignoredServices: '*'
   host:
@@ -35,7 +23,9 @@ zuul:
   routes:
     agenda-cadastro-service:
       path: /api/contatos/**
+      sensitive-headers: null
       serviceId: agenda-cadastro-service
+      strip-prefix: false
 
 security:
   basic:
