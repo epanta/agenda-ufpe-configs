@@ -14,6 +14,9 @@ eureka:
 
 zuul:
   ignoredServices: '*'
+  ribbon:
+    eager-load:
+      enabled: true
   host:
     max-total-connections: 1000
     max-per-route-connections: 1000
