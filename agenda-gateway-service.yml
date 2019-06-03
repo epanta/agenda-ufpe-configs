@@ -12,14 +12,6 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-endpoints:
-  restart:
-    enabled: false
-  shutdown:
-    enabled: true
-  health:
-    sensitive: false
-
 ribbon:
   ConnectTimeout: 60000
   ReadTimeout: 60000
