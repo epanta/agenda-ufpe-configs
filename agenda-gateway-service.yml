@@ -15,7 +15,7 @@ eureka:
 zuul:
   ignoredServices: '*'
   routes:
-    prefix= /api
+    prefix: /api
     agenda-cadastro-service:
       path: /api/contatos/**
       serviceId: agenda-cadastro-service
