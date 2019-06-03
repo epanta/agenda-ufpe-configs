@@ -13,8 +13,8 @@ eureka:
     wait-time-in-ms-when-sync-empty: 3000
 
 ribbon:
-  ConnectTimeout: 10000
-  ReadTimeout: 10000
+  ConnectTimeout: 60000
+  ReadTimeout: 60000
 
 hystrix:
   command:
@@ -22,13 +22,13 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 11000
+            timeoutInMilliseconds: 20000
 
 zuul:
   ignoredServices: '*'
   host:
-    max-total-connections: 1000
-    max-per-route-connections: 1000
+    connect-timeout-millis: 60000
+    socket-timeout-milli: 60000
   ribbon:
     eager-load:
       enabled: true
