@@ -14,18 +14,11 @@ eureka:
 
 zuul:
   ignoredServices: '*'
-  host:
-    connect-timeout-millis: 60000
-    socket-timeout-milli: 60000
-  ribbon:
-    eager-load:
-      enabled: true
   routes:
+    prefix= /api
     agenda-cadastro-service:
       path: /api/contatos/**
-      sensitive-headers: null
       serviceId: agenda-cadastro-service
-      strip-prefix: false
 
 security:
   basic:
