@@ -21,8 +21,9 @@ hystrix:
     default:
       execution:
         isolation:
+          strategy: THREAD
           thread:
-              timeoutInMilliseconds: 60000
+            timeoutInMilliseconds: 60000
 
 zuul:
   ignoredServices: '*'
