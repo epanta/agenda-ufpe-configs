@@ -12,14 +12,6 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 1000000
-
 zuul:
   ignoredServices: '*'
   host:
