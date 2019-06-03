@@ -34,7 +34,7 @@ hystrix:
 
 zuul:
   ignoredServices: '*'
-  add-proxy-headers: false
+  add-proxy-headers: true
   host:
     max-total-connections: 1000
     max-per-route-connections: 1000
