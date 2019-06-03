@@ -22,8 +22,9 @@ hystrix:
   command:
     default:
       execution:
-        timeout:
-          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 11
 
 zuul:
   ignoredServices: '*'
