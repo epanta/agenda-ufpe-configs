@@ -17,8 +17,6 @@ ribbon:
   ReadTimeout: 10000
   MaxAutoRetries: 1
   MaxAutoRetriesNextServer: 1
-  eureka:
-    enabled: true
 
 hystrix:
   command:
