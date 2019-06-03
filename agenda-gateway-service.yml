@@ -21,7 +21,7 @@ endpoints:
     sensitive: false
 
 ribbon:
-  ConnectTimeout: 10000
+  ConnectTimeout: 60000
   ReadTimeout: 60000
 
 hystrix:
