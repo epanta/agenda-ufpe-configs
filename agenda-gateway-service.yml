@@ -14,7 +14,7 @@ eureka:
 
 endpoints:
   restart:
-    enabled: true
+    enabled: false
   shutdown:
     enabled: true
   health:
