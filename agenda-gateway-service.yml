@@ -30,6 +30,9 @@ zuul:
   host:
     max-total-connections: 1000
     max-per-route-connections: 1000
+  ribbon:
+    eager-load:
+      enabled: true
   routes:
     agenda-cadastro-service:
       path: /api/contatos/**
