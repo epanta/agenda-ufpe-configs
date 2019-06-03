@@ -43,9 +43,7 @@ zuul:
   routes:
     agenda-cadastro-service:
       path: /api/contatos/**
-      sensitive-headers: null
       serviceId: agenda-cadastro-service
-      strip-prefix: false
 
 security:
   basic:
