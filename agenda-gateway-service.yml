@@ -39,8 +39,6 @@ zuul:
     agenda-cadastro-service:
       path: /api/contatos/**
       serviceId: agenda-cadastro-service
-server:
-  connection-timeout: 30000
 
 security:
   basic:
