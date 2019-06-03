@@ -14,6 +14,9 @@ eureka:
 
 zuul:
   ignoredServices: '*'
+  host:
+    max-total-connections: 1000
+    max-per-route-connections: 1000
   routes:
     agenda-cadastro-service:
       path: /api/contatos/**
