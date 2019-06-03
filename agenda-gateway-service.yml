@@ -17,12 +17,17 @@ ribbon:
   ReadTimeout: 60000
 
 hystrix:
+  threadpool:
+    default:
+      coreSize: 50
+      maxQueueSize: 100
+      queueSizeRejectionThreshold: 50
   command:
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 60000
+            timeoutInMilliseconds: 210000
 
 zuul:
   ignoredServices: '*'
