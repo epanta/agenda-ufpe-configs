@@ -22,7 +22,7 @@ endpoints:
 
 ribbon:
   ConnectTimeout: 10000
-  ReadTimeout: 30000
+  ReadTimeout: 60000
 
 hystrix:
   command:
