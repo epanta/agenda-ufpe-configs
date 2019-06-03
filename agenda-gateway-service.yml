@@ -32,8 +32,8 @@ zuul:
     eager-load:
       enabled: true
   routes:
-    agenda-cadastro-service:
-      path: /api/contatos/**
+    agendaUi:
+      path: /agendaUi/**
       serviceId: agenda-cadastro-service
 
 security:
