@@ -12,26 +12,25 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
 ribbon:
-  eager-load:
-      enabled: true
   ConnectTimeout: 10000
   ReadTimeout: 30000
 
 hystrix:
-  threadpool:
-    default:
-      coreSize: 1000
-      maximumSize: 10000
-      queueSizeRejectionThreshold: -1
-      maxQueueSize: -1
   command:
     default:
       execution:
         isolation:
-          strategy: THREAD
           thread:
-              timeoutInMilliseconds: 41000
+              timeoutInMilliseconds: 60000
 
 zuul:
   ignoredServices: '*'
@@ -40,12 +39,8 @@ zuul:
     max-per-route-connections: 1000
   routes:
     agenda-cadastro-service:
-      eager-load:
-        enabled: true
       path: /api/contatos/**
-      sensitive-headers: null
       serviceId: agenda-cadastro-service
-      strip-prefix: false
 
 security:
   basic:
