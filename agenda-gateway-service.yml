@@ -13,6 +13,10 @@ eureka:
     wait-time-in-ms-when-sync-empty: 3000
 
 ribbon:
+  eureka:
+    enabled: false
+  eager-load:
+      enabled: true
   ConnectTimeout: 10000
   ReadTimeout: 30000
 
