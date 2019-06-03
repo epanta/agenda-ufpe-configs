@@ -11,7 +11,16 @@ eureka:
       defaultZone: http://eureka-server:9091/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
-              
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 60000
+
 zuul:
   ignoredServices: '*'
   host:
