@@ -5,7 +5,7 @@ eureka:
   instance:
     hostname: gateway-server
   client:
-    registerWithEureka: true
+    registerWithEureka: false
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://eureka-server:9091/eureka/
@@ -15,8 +15,6 @@ eureka:
 ribbon:
   ConnectTimeout: 10000
   ReadTimeout: 10000
-  MaxAutoRetries: 1
-  MaxAutoRetriesNextServer: 1
 
 hystrix:
   command:
