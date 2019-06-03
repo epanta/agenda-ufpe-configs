@@ -12,11 +12,17 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 60000
+
 zuul:
   ignoredServices: '*'
-  ribbon:
-    eager-load:
-      enabled: true
   host:
     max-total-connections: 1000
     max-per-route-connections: 1000
