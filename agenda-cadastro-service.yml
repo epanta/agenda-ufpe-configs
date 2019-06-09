@@ -17,7 +17,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     password: 'root'
     platform: mysql
-    url: jdbc:mysql://mysqldb/agenda-cadastro?verifyServerCertificate=false&useSSL=false&requireSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/agenda-cadastro?verifyServerCertificate=false&useSSL=false&requireSSL=false
     username: root
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
