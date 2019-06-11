@@ -23,6 +23,5 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5Dialect
     generate-ddl: false
       hibernate:
-        format_sql: true
         ddl-auto: create
     show-sql: true
