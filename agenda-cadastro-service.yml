@@ -20,9 +20,10 @@ spring:
     url: jdbc:mysql://mysqldb/agenda-cadastro?verifyServerCertificate=false&useSSL=false&requireSSL=false
     username: root
   jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.MySQL5Dialect
     generate-ddl: false
       hibernate:
         format_sql: true
         ddl-auto: create
+        naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     show-sql: true
