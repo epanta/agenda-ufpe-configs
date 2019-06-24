@@ -27,3 +27,10 @@ spring:
   h2:
     console:
       enabled: true
+      
+## Configuring info endpoint
+info:
+  app:
+    name: agenda cadastro
+    description: Backend do servidor de cadastros
+    version: 1.0.0
