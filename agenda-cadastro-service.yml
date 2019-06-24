@@ -6,7 +6,7 @@ eureka:
     hostname: agenda-cadastro
   client:
     registerWithEureka: true
-    fetchRegistry: true
+    fetchRegistry: false
     serviceUrl:
       defaultZone: http://eureka-server:9091/eureka/
   server:
