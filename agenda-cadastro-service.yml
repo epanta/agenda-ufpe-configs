@@ -14,14 +14,16 @@ eureka:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    password: 'root'
-    platform: mysql
-    url: jdbc:mysql://mysqldb/agenda-cadastro?verifyServerCertificate=false&useSSL=false&requireSSL=false
-    username: root
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
   jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.H2Dialect
     generate-ddl: false
     hibernate:
       ddl-auto: create
     show-sql: true
+  h2:
+    console:
+      enabled: true
