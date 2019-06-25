@@ -33,7 +33,7 @@ ribbon:
   eureka:
     enabled: false
 
-agenda-cadastro:
+agenda-cadastro-service:
   ribbon:
     listOfServers: agenda-cadastro:9092
 
