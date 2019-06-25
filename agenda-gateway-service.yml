@@ -12,6 +12,11 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+feign:
+  client:
+    url:
+      TestUrl: http://agenda-cadastro:9092
+
 zuul:
   ignoredServices: '*'
   host:
@@ -19,10 +24,18 @@ zuul:
     max-per-route-connections: 1000
   routes:
     agenda-cadastro-service:
-      path: /api/contatos/**
+      path: /api/v1/contatos/**
       sensitive-headers: null
       serviceId: agenda-cadastro-service
       strip-prefix: false
+
+ribbon:
+  eureka:
+    enabled: false
+
+agenda-cadastro-service:
+  ribbon:
+    listOfServers: agenda-cadastro:9092
 
 security:
   basic:
